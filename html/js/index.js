@@ -5,7 +5,7 @@ function ajax(url, elem, callback) {
         elem.innerHTML = makeTbody(this.responseText);
        }
        if(callback) {
-         callback();
+         callback(this.responseText);
        }
      };
 
@@ -17,7 +17,7 @@ function makeTbody(text) {
   let lines = text.split('\n');
   let html = '';
   for(let i=0; i<lines.length; i++) {
-    if(i===0 || lines[i].trim().length == 0) {
+    if(i===1 || lines[i].trim().length == 0) {
       continue;
     }
     html += '<tr>';
@@ -44,13 +44,20 @@ function printProcess(offset, callback) {
 }
 
 function makePaging(text) {
-  let count = text.split('\n')[0];
+  let firstline = text.split('\n')[1];
+  let count = firstline ? firstline.split('=')[1] : 1;
   let max = Math.ceil(count/15);
+  console.log(count)
+  console.log(max)
   let nav = document.getElementById('pagination');
   let html = '<ul class="pagination-list">';
   for(let i=1; i<=max; i++) {
     html += '<li>';
-    html += '<a class="pagination-link" aria-label="Goto page ';
+    html += '<a class="pagination-link';
+    if(i===1) {
+       html += ' is-current';
+    }
+    html += '" aria-label="Goto page ';
     html += i;
     html += '" aria-current="page">';
     html += i;
