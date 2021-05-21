@@ -35,7 +35,7 @@
       <section class="section">
         <h1 class="title">
           Process
-          <button onclick='printProcess(1, 15)'>check</button>
+          <button onclick='printProcess(1, makePaging)'>check</button>
         </h1>
         <h2 class="subtitle">
           Check out the current processes
@@ -60,23 +60,23 @@
           </tbody>
         </table>
         <!-- Paging -->
-        <nav class="pagination is-small" role="navigation" aria-label="pagination">
-          <ul class="pagination-list">
+        <nav class="pagination is-small" role="navigation" aria-label="pagination" id="pagination">
+          <!-- <ul class="pagination-list">
             <li><a class="pagination-link is-current" aria-label="page 1" aria-current="page">1</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 45">2</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 46">3</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 47">4</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 86">5</a></li>
-          </ul>
+            <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
+            <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
+            <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
+            <li><a class="pagination-link" aria-label="Goto page ">5</a></li>
+          </ul> -->
         </nav>
       </section>
       <!-- footer -->
       <footer class="footer">
         <div class="content">
           <p>
-            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+            <strong>Automatic System Hardening</strong> by <a href="https://github.com/inyestar">Inyestar</a>
+            ** Disclaimer
+            Please don't run this program
           </p>
         </div>
       </footer>
