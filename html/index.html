@@ -1,0 +1,105 @@
+<html>
+  <head>
+      <title>Automatic System Hardening</title>
+      <script src="./resources/index.js"></script>
+      <link rel="stylesheet" href="./css/bulma.css">
+      <link rel="stylesheet" href="./css/fontawesome.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <!-- navigation -->
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="#">
+            <b>Automatic System Hardening</b>
+          </a>
+        </div>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item">Dashboard</a>
+            <a class="navbar-item">Documentation</a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link">More</a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item">About</a>
+                <a class="navbar-item">Jobs</a>A
+                <a class="navbar-item">Contact</a>
+                <hr class="navbar-divider">
+                <a class="navbar-item">Report an issue</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!-- section -->
+      <section class="section">
+        <h1 class="title">
+          Process
+          <button onclick='printProcess()'>check</button>
+        </h1>
+        <h2 class="subtitle">
+          Check out the current processes
+        </h2>
+        <!-- list -->
+        <table class="table">
+          <thead>
+            <tr>
+              <th>UID</th>
+              <th>PID</th>
+              <th>PPID</th>
+              <th>STIME</th>
+              <th>TTY</th>
+              <th>TIME</th>
+              <th>CMD</th>
+            </tr>
+          </thead>
+          <tbody id="ps-result">
+            <tr>
+              <th>1</th>
+              <td>38</td>
+              <td>23</td>
+              <td>12</td>
+              <td>68</td>
+              <td>36</td>
+              <td>+32</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- Paging -->
+        <nav class="pagination is-centered is-small" role="navigation" aria-label="pagination">
+          <a class="pagination-previous">Previous</a>
+          <a class="pagination-next">Next page</a>
+          <ul class="pagination-list">
+            <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 45">45</a></li>
+            <li><a class="pagination-link is-current" aria-label="Page 46" aria-current="page">46</a></li>
+            <li><a class="pagination-link" aria-label="Goto page 47">47</a></li>
+            <li><span class="pagination-ellipsis">&hellip;</span></li>
+            <li><a class="pagination-link" aria-label="Goto page 86">86</a></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- footer -->
+      <footer class="footer">
+        <div class="content">
+          <p>
+            <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
+            <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+            is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+          </p>
+        </div>
+      </footer>
+    </div>
+
+
+    <!-- <div w3-include-html="./navi.html"></div>
+    <div class="row">
+      <div class="label">
+        <button onclick="listup()">파일 리스트 확인</button>
+      </div>
+      <div class="field" id="list">
+      </div>
+    </div> -->
+  </body>
+</html>
