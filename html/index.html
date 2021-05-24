@@ -4,6 +4,9 @@
       <script src="./js/index.js"></script>
       <link rel="stylesheet" href="./css/bulma.css">
       <link rel="stylesheet" href="./css/fontawesome.min.css">
+      <script type="text/javascript">
+        window.addEventListener("load", _dash.init);
+      </script>
   </head>
   <body>
     <div class="container">
@@ -31,15 +34,22 @@
           </div>
         </div>
       </nav>
-      <!-- section -->
-      <section class="section">
+      <!-- content -->
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <p class="title">
+            Dashboard
+          </p>
+          <p class="subtitle">
+            Make sure that your server is stable whenever you want!
+          </p>
+        </div>
+      </section>
+      <section class="section" id="content-process">
         <h1 class="title">
           Process
-          <button onclick='printProcess(1, makePaging)'>check</button>
+          <button id="btn-process">check</button>
         </h1>
-        <h2 class="subtitle">
-          Check out the current processes
-        </h2>
         <!-- list -->
         <table class="table">
           <thead>
@@ -54,21 +64,13 @@
             </tr>
           </thead>
           <tbody id="ps-result">
-	    <tr>
+            <tr>
               <td colspan="7" style="text-align: center;">Please click 'check' button above</td>
             </tr>
           </tbody>
         </table>
         <!-- Paging -->
-        <nav class="pagination is-small" role="navigation" aria-label="pagination" id="pagination">
-          <!-- <ul class="pagination-list">
-            <li><a class="pagination-link is-current" aria-label="page 1" aria-current="page">1</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 2">2</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
-            <li><a class="pagination-link" aria-label="Goto page 4">4</a></li>
-            <li><a class="pagination-link" aria-label="Goto page ">5</a></li>
-          </ul> -->
-        </nav>
+        <nav class="pagination is-small" role="navigation" aria-label="pagination" id="pagination"></nav>
       </section>
       <!-- footer -->
       <footer class="footer">
