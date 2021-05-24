@@ -61,7 +61,7 @@ _dash.drawTable = function (text) {
 
   let tbody = document.getElementById('ps-result');
   tbody.innerHTML = html;
-  _dash.printProcess(text);
+  _dash._drawPaging(text);
 }
 
 _dash._drawPaging = function (text) {
