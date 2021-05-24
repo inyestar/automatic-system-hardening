@@ -1,14 +1,13 @@
 var _common = {};
 
 // ajax
-_common.ajax = function (url, elem, callback) {
+_common.ajax = function (url, callback) {
   var xhttp = new XMLHttpRequest();
    xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        elem.innerHTML = makeTbody(this.responseText);
-       }
-       if(callback) {
-         callback(this.responseText);
+        if(callback) {
+          callback();
+        }
        }
      };
 
@@ -30,17 +29,14 @@ var _dash = {};
 _dash.init = function() {
 
   _common.bindEvent('btn-process', 'click', _dash.printProcess);
-  _dash.printProcess(1, _dash._drawPaging);
+  _dash.printProcess(1);
 
 }
 
-
 _dash.printProcess = function (offset, callback) {
   let start = offset == 1? 1 : ((offset-1) * 15)+1;
-  let end = start == 1? 15 : (start + 14)
-  let tbody = document.getElementById('ps-result');
-
-  _common.ajax('ps.sh?start='+ start +'&end=' + end, tbody, callback);
+  let end = start == 1? 15 : (start + 14);
+  _common.ajax('ps.sh?start='+ start +'&end=' + end, _dash.drawTable);
 }
 
 _dash.drawTable = function (text) {
@@ -62,15 +58,16 @@ _dash.drawTable = function (text) {
     }
     html += '</tr>';
   }
- return html;
+
+  let tbody = document.getElementById('ps-result');
+  tbody.innerHTML = html;
+  _dash.printProcess(text);
 }
 
 _dash._drawPaging = function (text) {
   let firstline = text.split('\n')[1];
   let count = firstline ? firstline.split('=')[1] : 1;
   let max = Math.ceil(count/15);
-  console.log(count)
-  console.log(max)
   let nav = document.getElementById('pagination');
   let html = '<ul class="pagination-list">';
   for(let i=1; i<=max; i++) {
