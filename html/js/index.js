@@ -6,7 +6,7 @@ _common.ajax = function (url, callback) {
    xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         if(callback) {
-          callback();
+          callback(this.responseText);
         }
        }
      };
