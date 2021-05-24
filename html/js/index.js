@@ -40,7 +40,7 @@ _dash.printProcess = function (offset, callback) {
   let end = start == 1? 15 : (start + 14)
   let tbody = document.getElementById('ps-result');
 
-  ajax('ps.sh?start='+ start +'&end=' + end, tbody, callback);
+  _common.ajax('ps.sh?start='+ start +'&end=' + end, tbody, callback);
 }
 
 _dash.drawTable = function (text) {
