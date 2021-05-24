@@ -1,3 +1,29 @@
+var _common = {};
+
+// ajax
+_common.ajax = function (url, elem, callback) {
+  var xhttp = new XMLHttpRequest();
+   xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        elem.innerHTML = makeTbody(this.responseText);
+       }
+       if(callback) {
+         callback(this.responseText);
+       }
+     };
+
+   xhttp.open("GET", '/cgi-bin/' + url, true);
+   xhttp.send();
+}
+
+_common.bindEvent = function(id, type, event) {
+  let dom = document.getElementById(id);
+  if(!dom) {
+    return;
+  }
+  dom.addEventListener(type, event);
+}
+
 var _dash = {};
 
 // 페이지 초기화
@@ -62,30 +88,4 @@ _dash._drawPaging = function (text) {
 
   html += '</ul>';
   nav.innerHTML = html;
-}
-
-var _common = {};
-
-// ajax
-_common.ajax = function (url, elem, callback) {
-  var xhttp = new XMLHttpRequest();
-   xhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        elem.innerHTML = makeTbody(this.responseText);
-       }
-       if(callback) {
-         callback(this.responseText);
-       }
-     };
-
-   xhttp.open("GET", '/cgi-bin/' + url, true);
-   xhttp.send();
-}
-
-_common.bindEvent = function(id, type, event) {
-  let dom = document.getElementById(id);
-  if(!dom) {
-    return;
-  }
-  dom.addEventListener(type, event);
 }
