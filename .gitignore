@@ -1,1 +1,2 @@
-./cgi-bin/pslist
+!./cgi-bin/result/README
+./cgi-bin/result/*
