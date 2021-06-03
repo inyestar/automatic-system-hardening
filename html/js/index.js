@@ -32,6 +32,8 @@ _dash.init = function() {
   _common.bindEvent('btn-process', 'click', _dash.printProcess);
   _dash.printProcess(1, true);
   _dash.printMemory();
+  _dash.printCpu();
+  _dash.printDisk();
 
 }
 
@@ -124,3 +126,50 @@ _dash.drawMemTable = function(text) {
   let tbody = document.getElementById('free-result');
   tbody.innerHTML = html;
 }
+
+_dash.printCpu = function() {
+  _common.ajax('top.sh', _dash.drawCpuTable);
+}
+
+_dash.drawCpuTable = function(text) {
+  let lines = text.replaceAll('\n','').split(',');
+  let html = '<tr>';
+  for(let i in lines) {  
+    html += '<td>';
+    html += lines[i].indexOf('%') > -1 ? lines[i].replace('%','') : lines[i].slice(0, lines[i].length-2);
+    html += '</td>';
+  }
+  html += '</tr>';
+
+  let tbody = document.getElementById('top-result');
+  tbody.innerHTML = html;
+}
+
+_dash.printDisk = function() {
+  _common.ajax('df.sh', _dash.drawDiskTable);
+}
+
+_dash.drawDiskTable = function(text) {
+  let lines = text.split('\n');
+  let html = '';
+  for(let i=0; i<lines.length; i++) {
+    if(lines[i].trim().length == 0) {
+      continue;
+    }
+    html += '<tr>';
+    let columns = lines[i].split(',');
+    for(let j=0; j<columns.length; j++) {
+      if(j===7) {
+         break;
+      }
+      html += '<td>';
+      html += columns[j];
+      html += '</td>';
+    }
+    html += '</tr>';
+  }
+
+  let tbody = document.getElementById('df-result');
+  tbody.innerHTML = html;
+}
+

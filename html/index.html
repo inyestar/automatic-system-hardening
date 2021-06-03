@@ -46,7 +46,7 @@
         </div>
       </section>
       <!-- cpu -->
-      <section class="section" id="content-cpu">
+      <section class="section">
         <h1 class="title">
           CPU
           <button id="btn-process">check</button>
@@ -65,7 +65,7 @@
               <th>st</th>
             </tr>
           </thead>
-          <tbody id="cpu-result">
+          <tbody id="top-result">
             <tr>
               <td colspan="7" style="text-align: center;">Please click 'check' button above</td>
             </tr>
@@ -73,10 +73,10 @@
         </table>
       </section>
       <!-- memory -->
-      <section class="section" id="content-memory">
+      <section class="section">
         <h1 class="title">
+          <button id="btn-process">V</button>
           Memory
-          <button id="btn-process">check</button>
         </h1>
         <table class="table is-fullwidth">
           <thead>
@@ -97,8 +97,33 @@
           </tbody>
         </table>
       </section>
+      <!-- disk -->
+      <section class="section">
+        <h1 class="title">
+          Disk
+          <button id="btn-process">check</button>
+        </h1>
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th>Filesystem</th>
+              <th>Type</th>
+              <th>Size</th>
+              <th>Used</th>
+              <th>Avail</th>
+              <th>Use%</th>
+              <th>Mounted on</th>
+            </tr>
+          </thead>
+          <tbody id="df-result">
+            <tr>
+              <td colspan="7" style="text-align: center;">Please click 'check' button above</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
       <!-- process -->
-      <section class="section" id="content-process">
+      <section class="section">
         <h1 class="title">
           Process
           <button id="btn-process">check</button>
