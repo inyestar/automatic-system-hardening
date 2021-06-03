@@ -34,14 +34,14 @@ _dash.init = function() {
 
 }
 
-_dash.printProcess = function (offset, callback) {
+_dash.printProcess = function (offset) {
   offset = offset || 1;
   let start = offset == 1? 1 : ((offset-1) * 15)+1;
   let end = start == 1? 15 : (start + 14);
   _common.ajax('ps.sh?start='+ start +'&end=' + end, _dash.drawTable);
 }
 
-_dash.drawTable = function (text) {
+_dash.drawTable = function (text, canceled) {
   let lines = text.split('\n');
   let html = '';
   for(let i=0; i<lines.length; i++) {
@@ -63,7 +63,9 @@ _dash.drawTable = function (text) {
 
   let tbody = document.getElementById('ps-result');
   tbody.innerHTML = html;
-  _dash._drawPaging(text);
+  if(!canceled) {
+      _dash._drawPaging(text);
+  }
 }
 
 _dash._drawPaging = function (text) {
@@ -73,17 +75,12 @@ _dash._drawPaging = function (text) {
   let nav = document.getElementById('pagination');
   let ul = document.createElement('ul');
   ul.classList.add('pagination-list');
-
-
-  let html = '<ul class="pagination-list">';
   for(let i=1; i<=max; i++) {
     let li = document.createElement('li');
     let a = document.createElement('a');
     a.classList.add('pagination-link');
-    a.addEventListener('click', function (i) {
-                console.log(i);
-		_dash.printProcess(i);
-	}, false);
+    a.addEventListener('click', _dash.getProcess, false);
+    a.onclik = _dash.printProcess(i);
     if(i===1){
         a.classList.add('is-current');
     }
@@ -93,6 +90,10 @@ _dash._drawPaging = function (text) {
   }
 
   nav.appendChild(ul);
+}
+
+_dash.getProcess = function(this) {
+  console.log(this);
 }
 
 _dash.printMemory = function() {
@@ -105,7 +106,7 @@ _dash.drawMemTable = function(text) {
   for(let i in lines) {
     if(i < 7) {
       continue;
-    } 
+    }
     if(i == 14) {
        html += '</tr><tr>';
     }
