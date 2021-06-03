@@ -1,3 +1,4 @@
+
 var _common = {};
 
 // ajax
@@ -29,23 +30,23 @@ var _dash = {};
 _dash.init = function() {
 
   _common.bindEvent('btn-process', 'click', _dash.printProcess);
-  _dash.printProcess(1);
+  _dash.printProcess(1, true);
   _dash.printMemory();
 
 }
 
-_dash.printProcess = function (offset) {
+_dash.printProcess = function (offset, init) {
   offset = offset || 1;
   let start = offset == 1? 1 : ((offset-1) * 15)+1;
   let end = start == 1? 15 : (start + 14);
-  _common.ajax('ps.sh?start='+ start +'&end=' + end, _dash.drawTable);
+  _common.ajax('ps.sh?start='+ start +'&end=' + end + (init? '&init=true' : ''), _dash.drawTable);
 }
 
-_dash.drawTable = function (text, canceled) {
+_dash.drawTable = function (text, stop) {
   let lines = text.split('\n');
   let html = '';
   for(let i=0; i<lines.length; i++) {
-    if(i===1 || lines[i].trim().length == 0) {
+    if(lines[i].indexOf('count') > -1 || lines[i].trim().length == 0) {
       continue;
     }
     html += '<tr>';
@@ -63,9 +64,10 @@ _dash.drawTable = function (text, canceled) {
 
   let tbody = document.getElementById('ps-result');
   tbody.innerHTML = html;
-  if(!canceled) {
-      _dash._drawPaging(text);
+  if(stop) {
+     return;
   }
+  _dash._drawPaging(text);
 }
 
 _dash._drawPaging = function (text) {
@@ -80,7 +82,6 @@ _dash._drawPaging = function (text) {
     let a = document.createElement('a');
     a.classList.add('pagination-link');
     a.addEventListener('click', _dash.getProcess, false);
-    a.onclik = _dash.printProcess(i);
     if(i===1){
         a.classList.add('is-current');
     }
@@ -92,8 +93,12 @@ _dash._drawPaging = function (text) {
   nav.appendChild(ul);
 }
 
-_dash.getProcess = function(this) {
-  console.log(this);
+_dash.getProcess = function(event) {
+  let target = event.target;
+  let offset = target.text;
+  target.parentNode.parentNode.querySelector('.is-current').classList.remove('is-current');
+  target.classList.add('is-current');
+  _dash.printProcess(offset, false);
 }
 
 _dash.printMemory = function() {

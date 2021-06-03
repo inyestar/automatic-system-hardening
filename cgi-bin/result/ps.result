@@ -1,152 +1,154 @@
-0 1 0 20:05 ? 00:00:03 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
-0 2 0 20:05 ? 00:00:00 [kthreadd]
-0 4 2 20:05 ? 00:00:00 [kworker/0:0H]
-0 6 2 20:05 ? 00:00:00 [ksoftirqd/0]
-0 7 2 20:05 ? 00:00:00 [migration/0]
-0 8 2 20:05 ? 00:00:00 [rcu_bh]
-0 9 2 20:05 ? 00:00:02 [rcu_sched]
-0 10 2 20:05 ? 00:00:00 [lru-add-drain]
-0 11 2 20:05 ? 00:00:00 [watchdog/0]
-0 12 2 20:05 ? 00:00:00 [watchdog/1]
-0 13 2 20:05 ? 00:00:00 [migration/1]
-0 14 2 20:05 ? 00:00:01 [ksoftirqd/1]
-0 16 2 20:05 ? 00:00:00 [kworker/1:0H]
-0 17 2 20:05 ? 00:00:00 [watchdog/2]
-0 18 2 20:05 ? 00:00:00 [migration/2]
-0 19 2 20:05 ? 00:00:00 [ksoftirqd/2]
-0 21 2 20:05 ? 00:00:00 [kworker/2:0H]
-0 22 2 20:05 ? 00:00:00 [watchdog/3]
-0 23 2 20:05 ? 00:00:00 [migration/3]
-0 24 2 20:05 ? 00:00:00 [ksoftirqd/3]
-0 26 2 20:05 ? 00:00:00 [kworker/3:0H]
-0 28 2 20:05 ? 00:00:00 [kdevtmpfs]
-0 29 2 20:05 ? 00:00:00 [netns]
-0 30 2 20:05 ? 00:00:00 [khungtaskd]
-0 31 2 20:05 ? 00:00:00 [writeback]
-0 32 2 20:05 ? 00:00:00 [kintegrityd]
-0 33 2 20:05 ? 00:00:00 [bioset]
-0 34 2 20:05 ? 00:00:00 [bioset]
-0 35 2 20:05 ? 00:00:00 [bioset]
-0 36 2 20:05 ? 00:00:00 [kblockd]
-0 37 2 20:05 ? 00:00:00 [md]
-0 38 2 20:05 ? 00:00:00 [edac-poller]
-0 39 2 20:05 ? 00:00:00 [watchdogd]
-0 45 2 20:05 ? 00:00:00 [kswapd0]
-0 46 2 20:05 ? 00:00:00 [ksmd]
-0 47 2 20:05 ? 00:00:00 [khugepaged]
-0 48 2 20:05 ? 00:00:00 [crypto]
-0 56 2 20:05 ? 00:00:00 [kthrotld]
-0 57 2 20:05 ? 00:00:00 [kworker/u256:1]
-0 58 2 20:05 ? 00:00:00 [kmpath_rdacd]
-0 59 2 20:05 ? 00:00:00 [kaluad]
-0 60 2 20:05 ? 00:00:00 [kworker/3:1]
-0 61 2 20:05 ? 00:00:18 [kworker/0:1]
-0 62 2 20:05 ? 00:00:00 [kpsmoused]
-0 64 2 20:05 ? 00:00:00 [ipv6_addrconf]
-0 77 2 20:05 ? 00:00:00 [deferwq]
-0 113 2 20:05 ? 00:00:00 [kauditd]
-0 228 2 20:05 ? 00:00:01 [kworker/3:2]
-0 300 2 20:05 ? 00:00:00 [ata_sff]
-0 301 2 20:05 ? 00:00:00 [nfit]
-0 302 2 20:05 ? 00:00:00 [scsi_eh_0]
-0 303 2 20:05 ? 00:00:00 [scsi_tmf_0]
-0 304 2 20:05 ? 00:00:00 [scsi_eh_1]
-0 305 2 20:05 ? 00:00:00 [scsi_tmf_1]
-0 309 2 20:05 ? 00:00:00 [mpt_poll_0]
-0 310 2 20:05 ? 00:00:00 [mpt/0]
-0 319 2 20:05 ? 00:00:00 [scsi_eh_2]
-0 320 2 20:05 ? 00:00:00 [scsi_tmf_2]
-0 322 2 20:05 ? 00:00:00 [irq/16-vmwgfx]
-0 323 2 20:05 ? 00:00:00 [ttm_swap]
-0 396 2 20:05 ? 00:00:00 [kdmflush]
-0 397 2 20:05 ? 00:00:00 [bioset]
-0 408 2 20:05 ? 00:00:00 [kdmflush]
-0 409 2 20:05 ? 00:00:00 [bioset]
-0 422 2 20:05 ? 00:00:00 [bioset]
-0 423 2 20:05 ? 00:00:00 [xfsalloc]
-0 424 2 20:05 ? 00:00:00 [xfs_mru_cache]
-0 425 2 20:05 ? 00:00:00 [xfs-buf/dm-0]
-0 426 2 20:05 ? 00:00:00 [xfs-data/dm-0]
-0 427 2 20:05 ? 00:00:00 [xfs-conv/dm-0]
-0 428 2 20:05 ? 00:00:00 [xfs-cil/dm-0]
-0 429 2 20:05 ? 00:00:00 [xfs-reclaim/dm-]
-0 430 2 20:05 ? 00:00:00 [xfs-log/dm-0]
-0 431 2 20:05 ? 00:00:00 [xfs-eofblocks/d]
-0 432 2 20:05 ? 00:00:12 [xfsaild/dm-0]
-0 433 2 20:05 ? 00:00:00 [kworker/1:1H]
-0 514 1 20:05 ? 00:00:00 /usr/lib/systemd/systemd-journald
-0 537 2 20:05 ? 00:00:00 [kworker/2:1H]
-0 540 1 20:05 ? 00:00:00 /usr/sbin/lvmetad -f
-0 551 1 20:05 ? 00:00:02 /usr/lib/systemd/systemd-udevd
-0 597 2 20:05 ? 00:00:00 [xfs-buf/sda1]
-0 598 2 20:05 ? 00:00:00 [xfs-data/sda1]
-0 599 2 20:05 ? 00:00:00 [xfs-conv/sda1]
-0 600 2 20:05 ? 00:00:00 [xfs-cil/sda1]
-0 601 2 20:05 ? 00:00:00 [xfs-reclaim/sda]
-0 602 2 20:05 ? 00:00:00 [xfs-log/sda1]
-0 604 2 20:05 ? 00:00:00 [xfs-eofblocks/s]
-0 607 2 20:05 ? 00:00:00 [xfsaild/sda1]
-0 636 2 20:05 ? 00:00:00 [kworker/u257:0]
-0 637 2 20:05 ? 00:00:00 [hci0]
-0 638 2 20:05 ? 00:00:00 [hci0]
-0 642 2 20:05 ? 00:00:00 [kworker/u257:2]
-0 660 2 20:05 ? 00:00:00 [kdmflush]
-0 661 2 20:05 ? 00:00:00 [bioset]
-0 666 2 20:05 ? 00:00:00 [xfs-buf/dm-2]
-0 667 2 20:05 ? 00:00:00 [xfs-data/dm-2]
-0 668 2 20:05 ? 00:00:00 [xfs-conv/dm-2]
-0 669 2 20:05 ? 00:00:00 [xfs-cil/dm-2]
-0 670 2 20:05 ? 00:00:00 [xfs-reclaim/dm-]
-0 671 2 20:05 ? 00:00:00 [xfs-log/dm-2]
-0 672 2 20:05 ? 00:00:00 [xfs-eofblocks/d]
-0 675 2 20:05 ? 00:00:00 [xfsaild/dm-2]
-0 692 1 20:05 ? 00:00:00 /sbin/auditd
-999 715 1 20:05 ? 00:00:00 /usr/lib/polkit-1/polkitd --no-debug
-0 718 1 20:05 ? 00:00:01 /usr/sbin/irqbalance --foreground
-0 719 1 20:05 ? 00:00:00 /usr/bin/VGAuthService -s
-0 720 1 20:05 ? 00:00:38 /usr/bin/vmtoolsd
-81 724 1 20:05 ? 00:00:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
-998 726 1 20:05 ? 00:00:00 /usr/sbin/chronyd
-0 740 1 20:05 ? 00:00:00 /usr/lib/systemd/systemd-logind
-0 761 2 20:05 ? 00:00:00 [kworker/3:1H]
-0 772 1 20:05 ? 00:00:00 /usr/sbin/crond -n
-0 775 1 20:05 ? 00:00:00 login -- root
-0 786 1 20:05 ? 00:00:01 /usr/bin/python2 -Es /usr/sbin/firewalld --nofork --nopid
-0 790 1 20:05 ? 00:00:01 /usr/sbin/NetworkManager --no-daemon
-0 1018 2 20:06 ? 00:00:00 [kworker/0:1H]
-0 1135 1 20:06 ? 00:00:04 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
-0 1144 1 20:06 ? 00:00:02 /usr/sbin/rsyslogd -n
-27 1194 1 20:06 ? 00:00:00 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
-27 1391 1194 20:06 ? 00:00:30 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariadb.log --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock
-0 1487 1 20:06 ? 00:00:00 /usr/libexec/postfix/master -w
-89 1517 1487 20:06 ? 00:00:00 qmgr -l -t unix -u
-0 1653 775 20:06 tty1 00:00:00 -bash
-0 1910 2 20:10 ? 00:00:00 [kworker/0:0]
-0 1918 1 20:12 ? 00:00:00 /usr/sbin/sshd -D
-0 1919 1918 20:12 ? 00:00:04 sshd: root@pts/0
-0 1921 1918 20:12 ? 00:00:00 sshd: root@notty
-0 1923 1921 20:12 ? 00:00:00 /usr/libexec/openssh/sftp-server
-0 1934 1919 20:12 pts/0 00:00:00 -bash
-0 2066 1 20:17 ? 00:00:02 /usr/sbin/httpd -DFOREGROUND
-48 2067 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2068 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2069 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2070 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2071 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2085 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2086 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-48 2087 2066 20:17 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
-0 2110 1918 20:25 ? 00:00:00 sshd: root@pts/1
-0 2112 1918 20:26 ? 00:00:00 sshd: root@notty
-0 2114 2110 20:26 pts/1 00:00:00 -bash
-0 2135 2112 20:26 ? 00:00:00 /usr/libexec/openssh/sftp-server
-0 2683 2 23:00 ? 00:00:00 [kworker/u256:0]
-0 2698 2 23:16 ? 00:00:00 [kworker/2:0]
-0 2699 2 23:16 ? 00:00:00 [kworker/1:0]
-0 2701 2 23:21 ? 00:00:00 [kworker/2:2]
-89 2719 1487 23:26 ? 00:00:00 pickup -l -t unix -u
-0 2721 2 23:26 ? 00:00:00 [kworker/1:1]
-0 2829 2 23:31 ? 00:00:00 [kworker/1:2]
-0 2830 2 23:32 ? 00:00:00 [kworker/2:1]
-48 2832 2087 23:32 ? 00:00:00 bash /var/www/cgi-bin/ps.sh
-48 2844 2832 23:32 ? 00:00:00 ps -o uid:1= -o pid:1= -o ppid:1= -o stime:1= -o tty:1= -o time:1= -o cmd:1= -e
+0 1 0 Jun02 ? 00:00:04 /usr/lib/systemd/systemd --switched-root --system --deserialize 22
+0 2 0 Jun02 ? 00:00:00 [kthreadd]
+0 4 2 Jun02 ? 00:00:00 [kworker/0:0H]
+0 6 2 Jun02 ? 00:00:01 [ksoftirqd/0]
+0 7 2 Jun02 ? 00:00:00 [migration/0]
+0 8 2 Jun02 ? 00:00:00 [rcu_bh]
+0 9 2 Jun02 ? 00:00:05 [rcu_sched]
+0 10 2 Jun02 ? 00:00:00 [lru-add-drain]
+0 11 2 Jun02 ? 00:00:00 [watchdog/0]
+0 12 2 Jun02 ? 00:00:00 [watchdog/1]
+0 13 2 Jun02 ? 00:00:00 [migration/1]
+0 14 2 Jun02 ? 00:00:02 [ksoftirqd/1]
+0 16 2 Jun02 ? 00:00:00 [kworker/1:0H]
+0 17 2 Jun02 ? 00:00:00 [watchdog/2]
+0 18 2 Jun02 ? 00:00:00 [migration/2]
+0 19 2 Jun02 ? 00:00:00 [ksoftirqd/2]
+0 21 2 Jun02 ? 00:00:00 [kworker/2:0H]
+0 22 2 Jun02 ? 00:00:01 [watchdog/3]
+0 23 2 Jun02 ? 00:00:00 [migration/3]
+0 24 2 Jun02 ? 00:00:00 [ksoftirqd/3]
+0 26 2 Jun02 ? 00:00:00 [kworker/3:0H]
+0 28 2 Jun02 ? 00:00:00 [kdevtmpfs]
+0 29 2 Jun02 ? 00:00:00 [netns]
+0 30 2 Jun02 ? 00:00:00 [khungtaskd]
+0 31 2 Jun02 ? 00:00:00 [writeback]
+0 32 2 Jun02 ? 00:00:00 [kintegrityd]
+0 33 2 Jun02 ? 00:00:00 [bioset]
+0 34 2 Jun02 ? 00:00:00 [bioset]
+0 35 2 Jun02 ? 00:00:00 [bioset]
+0 36 2 Jun02 ? 00:00:00 [kblockd]
+0 37 2 Jun02 ? 00:00:00 [md]
+0 38 2 Jun02 ? 00:00:00 [edac-poller]
+0 39 2 Jun02 ? 00:00:00 [watchdogd]
+0 45 2 Jun02 ? 00:00:00 [kswapd0]
+0 46 2 Jun02 ? 00:00:00 [ksmd]
+0 47 2 Jun02 ? 00:00:00 [khugepaged]
+0 48 2 Jun02 ? 00:00:00 [crypto]
+0 56 2 Jun02 ? 00:00:00 [kthrotld]
+0 58 2 Jun02 ? 00:00:00 [kmpath_rdacd]
+0 59 2 Jun02 ? 00:00:00 [kaluad]
+0 60 2 Jun02 ? 00:00:00 [kworker/3:1]
+0 61 2 Jun02 ? 00:00:31 [kworker/0:1]
+0 62 2 Jun02 ? 00:00:00 [kpsmoused]
+0 64 2 Jun02 ? 00:00:00 [ipv6_addrconf]
+0 77 2 Jun02 ? 00:00:00 [deferwq]
+0 113 2 Jun02 ? 00:00:00 [kauditd]
+0 228 2 Jun02 ? 00:00:01 [kworker/3:2]
+0 300 2 Jun02 ? 00:00:00 [ata_sff]
+0 301 2 Jun02 ? 00:00:00 [nfit]
+0 302 2 Jun02 ? 00:00:00 [scsi_eh_0]
+0 303 2 Jun02 ? 00:00:00 [scsi_tmf_0]
+0 304 2 Jun02 ? 00:00:00 [scsi_eh_1]
+0 305 2 Jun02 ? 00:00:00 [scsi_tmf_1]
+0 309 2 Jun02 ? 00:00:00 [mpt_poll_0]
+0 310 2 Jun02 ? 00:00:00 [mpt/0]
+0 319 2 Jun02 ? 00:00:00 [scsi_eh_2]
+0 320 2 Jun02 ? 00:00:00 [scsi_tmf_2]
+0 322 2 Jun02 ? 00:00:00 [irq/16-vmwgfx]
+0 323 2 Jun02 ? 00:00:00 [ttm_swap]
+0 396 2 Jun02 ? 00:00:00 [kdmflush]
+0 397 2 Jun02 ? 00:00:00 [bioset]
+0 408 2 Jun02 ? 00:00:00 [kdmflush]
+0 409 2 Jun02 ? 00:00:00 [bioset]
+0 422 2 Jun02 ? 00:00:00 [bioset]
+0 423 2 Jun02 ? 00:00:00 [xfsalloc]
+0 424 2 Jun02 ? 00:00:00 [xfs_mru_cache]
+0 425 2 Jun02 ? 00:00:00 [xfs-buf/dm-0]
+0 426 2 Jun02 ? 00:00:00 [xfs-data/dm-0]
+0 427 2 Jun02 ? 00:00:00 [xfs-conv/dm-0]
+0 428 2 Jun02 ? 00:00:00 [xfs-cil/dm-0]
+0 429 2 Jun02 ? 00:00:00 [xfs-reclaim/dm-]
+0 430 2 Jun02 ? 00:00:00 [xfs-log/dm-0]
+0 431 2 Jun02 ? 00:00:00 [xfs-eofblocks/d]
+0 432 2 Jun02 ? 00:00:22 [xfsaild/dm-0]
+0 433 2 Jun02 ? 00:00:00 [kworker/1:1H]
+0 514 1 Jun02 ? 00:00:00 /usr/lib/systemd/systemd-journald
+0 537 2 Jun02 ? 00:00:00 [kworker/2:1H]
+0 540 1 Jun02 ? 00:00:00 /usr/sbin/lvmetad -f
+0 551 1 Jun02 ? 00:00:02 /usr/lib/systemd/systemd-udevd
+0 597 2 Jun02 ? 00:00:00 [xfs-buf/sda1]
+0 598 2 Jun02 ? 00:00:00 [xfs-data/sda1]
+0 599 2 Jun02 ? 00:00:00 [xfs-conv/sda1]
+0 600 2 Jun02 ? 00:00:00 [xfs-cil/sda1]
+0 601 2 Jun02 ? 00:00:00 [xfs-reclaim/sda]
+0 602 2 Jun02 ? 00:00:00 [xfs-log/sda1]
+0 604 2 Jun02 ? 00:00:00 [xfs-eofblocks/s]
+0 607 2 Jun02 ? 00:00:00 [xfsaild/sda1]
+0 636 2 Jun02 ? 00:00:00 [kworker/u257:0]
+0 637 2 Jun02 ? 00:00:00 [hci0]
+0 638 2 Jun02 ? 00:00:00 [hci0]
+0 642 2 Jun02 ? 00:00:00 [kworker/u257:2]
+0 660 2 Jun02 ? 00:00:00 [kdmflush]
+0 661 2 Jun02 ? 00:00:00 [bioset]
+0 666 2 Jun02 ? 00:00:00 [xfs-buf/dm-2]
+0 667 2 Jun02 ? 00:00:00 [xfs-data/dm-2]
+0 668 2 Jun02 ? 00:00:00 [xfs-conv/dm-2]
+0 669 2 Jun02 ? 00:00:00 [xfs-cil/dm-2]
+0 670 2 Jun02 ? 00:00:00 [xfs-reclaim/dm-]
+0 671 2 Jun02 ? 00:00:00 [xfs-log/dm-2]
+0 672 2 Jun02 ? 00:00:00 [xfs-eofblocks/d]
+0 675 2 Jun02 ? 00:00:00 [xfsaild/dm-2]
+0 692 1 Jun02 ? 00:00:00 /sbin/auditd
+999 715 1 Jun02 ? 00:00:00 /usr/lib/polkit-1/polkitd --no-debug
+0 718 1 Jun02 ? 00:00:03 /usr/sbin/irqbalance --foreground
+0 719 1 Jun02 ? 00:00:00 /usr/bin/VGAuthService -s
+0 720 1 Jun02 ? 00:01:08 /usr/bin/vmtoolsd
+81 724 1 Jun02 ? 00:00:01 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation
+998 726 1 Jun02 ? 00:00:00 /usr/sbin/chronyd
+0 740 1 Jun02 ? 00:00:00 /usr/lib/systemd/systemd-logind
+0 761 2 Jun02 ? 00:00:00 [kworker/3:1H]
+0 772 1 Jun02 ? 00:00:00 /usr/sbin/crond -n
+0 775 1 Jun02 ? 00:00:00 login -- root
+0 786 1 Jun02 ? 00:00:01 /usr/bin/python2 -Es /usr/sbin/firewalld --nofork --nopid
+0 790 1 Jun02 ? 00:00:01 /usr/sbin/NetworkManager --no-daemon
+0 1018 2 Jun02 ? 00:00:00 [kworker/0:1H]
+0 1135 1 Jun02 ? 00:00:07 /usr/bin/python2 -Es /usr/sbin/tuned -l -P
+0 1144 1 Jun02 ? 00:00:03 /usr/sbin/rsyslogd -n
+27 1194 1 Jun02 ? 00:00:00 /bin/sh /usr/bin/mysqld_safe --basedir=/usr
+27 1391 1194 Jun02 ? 00:00:54 /usr/libexec/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib64/mysql/plugin --log-error=/var/log/mariadb/mariadb.log --pid-file=/var/run/mariadb/mariadb.pid --socket=/var/lib/mysql/mysql.sock
+0 1487 1 Jun02 ? 00:00:00 /usr/libexec/postfix/master -w
+89 1517 1487 Jun02 ? 00:00:00 qmgr -l -t unix -u
+0 1653 775 Jun02 tty1 00:00:00 -bash
+0 1910 2 Jun02 ? 00:00:00 [kworker/0:0]
+0 1918 1 Jun02 ? 00:00:00 /usr/sbin/sshd -D
+0 1919 1918 Jun02 ? 00:00:07 sshd: root@pts/0
+0 1921 1918 Jun02 ? 00:00:00 sshd: root@notty
+0 1923 1921 Jun02 ? 00:00:00 /usr/libexec/openssh/sftp-server
+0 1934 1919 Jun02 pts/0 00:00:00 -bash
+0 2066 1 Jun02 ? 00:00:03 /usr/sbin/httpd -DFOREGROUND
+48 2067 2066 Jun02 ? 00:00:02 /usr/sbin/httpd -DFOREGROUND
+48 2068 2066 Jun02 ? 00:00:01 /usr/sbin/httpd -DFOREGROUND
+48 2069 2066 Jun02 ? 00:00:01 /usr/sbin/httpd -DFOREGROUND
+48 2070 2066 Jun02 ? 00:00:02 /usr/sbin/httpd -DFOREGROUND
+48 2085 2066 Jun02 ? 00:00:02 /usr/sbin/httpd -DFOREGROUND
+48 2086 2066 Jun02 ? 00:00:01 /usr/sbin/httpd -DFOREGROUND
+48 2087 2066 Jun02 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
+0 2110 1918 Jun02 ? 00:00:01 sshd: root@pts/1
+0 2112 1918 Jun02 ? 00:00:00 sshd: root@notty
+0 2114 2110 Jun02 pts/1 00:00:00 -bash
+0 2135 2112 Jun02 ? 00:00:00 /usr/libexec/openssh/sftp-server
+0 2683 2 Jun02 ? 00:00:01 [kworker/u256:0]
+0 2873 2 Jun02 ? 00:00:00 [kworker/u256:2]
+48 3129 2066 Jun02 ? 00:00:01 /usr/sbin/httpd -DFOREGROUND
+48 3415 2066 Jun02 ? 00:00:01 /usr/sbin/httpd -DFOREGROUND
+48 5830 2066 Jun02 ? 00:00:00 /usr/sbin/httpd -DFOREGROUND
+89 10932 1487 01:06 ? 00:00:00 pickup -l -t unix -u
+0 11156 2 01:21 ? 00:00:00 [kworker/1:0]
+0 11753 2 01:46 ? 00:00:00 [kworker/2:2]
+0 11754 2 01:52 ? 00:00:00 [kworker/1:1]
+0 11755 2 01:56 ? 00:00:00 [kworker/2:1]
+0 11756 2 01:57 ? 00:00:00 [kworker/1:2]
+0 11793 2 02:02 ? 00:00:00 [kworker/2:0]
+48 11796 2087 02:07 ? 00:00:00 bash /var/www/cgi-bin/ps.sh
+48 11812 11796 02:07 ? 00:00:00 ps -o uid:1= -o pid:1= -o ppid:1= -o stime:1= -o tty:1= -o time:1= -o cmd:1= -e

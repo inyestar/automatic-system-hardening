@@ -41,9 +41,36 @@
             Dashboard
           </p>
           <p class="subtitle">
-            Make sure that your server is stable whenever you want!
+            Make sure that your server is stable!
           </p>
         </div>
+      </section>
+      <!-- cpu -->
+      <section class="section" id="content-cpu">
+        <h1 class="title">
+          CPU
+          <button id="btn-process">check</button>
+        </h1>
+        <table class="table is-fullwidth">
+          <thead>
+            <tr>
+              <th></th>
+              <th>us</th>
+              <th>sy</th>
+              <th>ni</th>
+              <th>id</th>
+              <th>wa</th>
+              <th>hi</th>
+              <th>si</th>
+              <th>st</th>
+            </tr>
+          </thead>
+          <tbody id="cpu-result">
+            <tr>
+              <td colspan="7" style="text-align: center;">Please click 'check' button above</td>
+            </tr>
+          </tbody>
+        </table>
       </section>
       <!-- memory -->
       <section class="section" id="content-memory">
@@ -51,7 +78,6 @@
           Memory
           <button id="btn-process">check</button>
         </h1>
-        <!-- list -->
         <table class="table is-fullwidth">
           <thead>
             <tr>
