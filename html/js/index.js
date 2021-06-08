@@ -134,7 +134,7 @@ _dash.printCpu = function() {
 _dash.drawCpuTable = function(text) {
   let lines = text.replaceAll('\n','').split(',');
   let html = '<tr>';
-  for(let i in lines) {  
+  for(let i in lines) {
     html += '<td>';
     html += lines[i].indexOf('%') > -1 ? lines[i].replace('%','') : lines[i].slice(0, lines[i].length-2);
     html += '</td>';
@@ -172,4 +172,3 @@ _dash.drawDiskTable = function(text) {
   let tbody = document.getElementById('df-result');
   tbody.innerHTML = html;
 }
-
